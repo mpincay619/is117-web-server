@@ -19,6 +19,12 @@ app.use((req, res) => {
   res.status(404).send('Page not found.');
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
-});
+// Only start listening when this file is run directly (node index.js / npm start).
+// When a test imports this file, the test starts and stops its own server.
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`Server running at http://localhost:${PORT}`);
+  });
+}
+
+module.exports = app;
