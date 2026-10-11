@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/mpincay619/is117-web-server/issues"
   },
-  "homepage": "https://github.com/mpincay619/is117-web-server#readme"
+  "homepage": "https://github.com/mpincay619/is117-web-server#readme",
+  "dependencies": {
+    "express": "^5.3.0"
+  }
 }
